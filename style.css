@@ -1,0 +1,136 @@
+/* style.css - Modern Tech Style */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap');
+
+body {
+    font-family: 'Inter', sans-serif; /* 今風のフォント */
+    line-height: 1.8;
+    color: #444;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f7f6; /* 薄いグレーでおしゃれに */
+}
+
+header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); /* グラデーション背景 */
+    color: #fff;
+    padding: 4rem 0; /* 高さを出してインパクト大に */
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 3.5rem;
+    font-weight: 700;
+    letter-spacing: -1px;
+}
+
+header p {
+    margin-top: 15px;
+    font-size: 1.2rem;
+    opacity: 0.9;
+    font-weight: 300;
+}
+
+.container {
+    max-width: 900px; /* 幅を少し広げる */
+    margin: -50px auto 50px; /* ヘッダーに少し重ねるデザイン */
+    padding: 40px;
+    background: #fff;
+    border-radius: 12px; /* 角丸 */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08); /* 浮いているような影 */
+    position: relative;
+}
+
+section {
+    margin-bottom: 4rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+section:last-child {
+    border-bottom: none;
+}
+
+h2 {
+    color: #2d3436;
+    font-size: 1.8rem;
+    border-left: none;
+    padding-left: 0;
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    position: relative;
+    display: inline-block;
+}
+
+/* タイトルの下に線を引く装飾 */
+h2::after {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 4px;
+    background: #764ba2;
+    margin-top: 8px;
+    border-radius: 2px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 0.8rem;
+    padding-left: 1.2rem;
+    position: relative;
+}
+
+/* リストの点の代わりに矢印 */
+li::before {
+    content: '›';
+    position: absolute;
+    left: 0;
+    color: #764ba2;
+    font-weight: bold;
+}
+
+.work-item {
+    background: #fff;
+    border: 1px solid #eee;
+    padding: 25px;
+    border-radius: 10px;
+    margin-top: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* アニメーション */
+}
+
+/* 作品にマウスを乗せると浮き上がる */
+.work-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    border-color: #764ba2;
+}
+
+.work-item h3 {
+    margin-top: 0;
+    color: #2d3436;
+}
+
+footer {
+    text-align: center;
+    padding: 30px;
+    background: #2d3436;
+    color: #aaa;
+    font-size: 0.9rem;
+}
+
+/* スマホ対応 */
+@media (max-width: 600px) {
+    header { padding: 3rem 0; }
+    header h1 { font-size: 2.2rem; }
+    .container {
+        margin: 0;
+        border-radius: 0;
+        box-shadow: none;
+        padding: 20px;
+    }
+}
